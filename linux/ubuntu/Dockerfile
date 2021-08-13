@@ -35,4 +35,8 @@ LABEL org.opencontainers.image.version=${BUILD_TAG_VERSION}
 LABEL org.opencontainers.image.title=${BUILD_TAG}-${TARGETARCH}
 LABEL org.opencontainers.image.revision=${BUILD_REF}
 
+RUN sudo apt-get update -y
+RUN sudo apt-get install -y python
+
+
 USER ${RUNNER}
